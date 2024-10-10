@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Uso de Sockets</title>
+</head>
+<body class="cuerpo">
+    <!-- Panel de login -->
+    <div id="panel-login">
+        <h2>Iniciar Sesión</h2>
+        <form id="form-login">
+            <input type="text" id="login-usuario" placeholder="Usuario" required><br>
+            <input type="password" id="login-password" placeholder="Contraseña" required><br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="mensaje-login"></p>
+    </div>
+
+    <!-- Panel de bienvenida -->
+    <div id="panel-bienvenida" style="display: none;">
+        <h2>Bienvenid@ a mi WhatsApp</h2>
+        <input type="text" id="persona" placeholder="Introduce tu nombre" required><br>
+        <button onclick="ingresarAlChat()">Ingresar</button>
+    </div>
+
+    <!-- Panel de registro -->
+    <div id="panel-registro" style="display: none;">
+        <h2>Registro de Usuario</h2>
+        <form id="form-register">
+            <input type="text" id="register-usuario" placeholder="Usuario" required><br>
+            <input type="password" id="register-password" placeholder="Contraseña" required><br>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p id="mensaje-registro"></p>
+    </div>
+
+    <!-- Chat -->
+    <div id="app-chat" style="display: none;">
+        <h2 class="nube box">Chat en vivo</h2>
+        <div id="ventana-mensajes">
+            <div id="output"></div>
+            <div id="escribiendo-mensaje"></div>
+        </div>
+        <input type="text" id="usuario" readonly><br>
+        <input type="text" id="mensaje"><br>
+        <button id="enviar">Enviar</button>
+    </div>
+
+    <script src="socket.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

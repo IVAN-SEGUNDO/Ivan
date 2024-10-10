@@ -1,0 +1,12 @@
+h2{
+    background-color: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+}
+.cuerpo{
+    background: bisque;
+}
+#otraCosa{
+    background: orangered;
+}
